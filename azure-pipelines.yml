@@ -1,4 +1,5 @@
 # Starter pipeline
+
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -8,6 +9,13 @@ trigger:
 
 pool:
   name: Default
+  -task: S3Upload@1
+  inputs:
+    awsCredentials: 'cloudops'
+    regionName: 'ap-south-1'
+    bucketName: 'demo-usha-devops'
+    sourceFolder: 'c:\agent_work.'
+    globExpressions: '*'
 
 steps:
 - script: echo Hello, Vigneshwar!
