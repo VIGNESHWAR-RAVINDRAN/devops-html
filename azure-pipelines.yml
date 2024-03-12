@@ -26,5 +26,4 @@ pool:
     awsCredentials: 'cloudops'
     regionName: 'ap-south-1'
     bucketName: 'demo-usha-devops'
-    sourceFolder: 'c:\agent_work.'
     globExpressions: '*'
