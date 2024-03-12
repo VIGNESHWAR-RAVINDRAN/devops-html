@@ -22,6 +22,7 @@ steps:
     regionName: 'ap-south-1'
     bucketName: 'demo-usha-devops'
     globExpressions: '*'
+    createBucket: true
 
 pool:
   name: Default
