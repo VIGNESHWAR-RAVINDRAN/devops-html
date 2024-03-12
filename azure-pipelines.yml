@@ -8,15 +8,7 @@
 trigger:
 - main
 
-pool:
-  name: Default
-  -task: S3Upload@1
-  inputs:
-    awsCredentials: 'cloudops'
-    regionName: 'ap-south-1'
-    bucketName: 'demo-usha-devops'
-    sourceFolder: 'c:\agent_work.'
-    globExpressions: '*'
+
 
 steps:
 - script: echo Hello, Vigneshwar!
@@ -26,3 +18,13 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+pool:
+  name: Default
+  -task: S3Upload@1
+  inputs:
+    awsCredentials: 'cloudops'
+    regionName: 'ap-south-1'
+    bucketName: 'demo-usha-devops'
+    sourceFolder: 'c:\agent_work.'
+    globExpressions: '*'
