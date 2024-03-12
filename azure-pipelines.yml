@@ -22,11 +22,8 @@ jobs:
       globExpressions: '*'
       createBucket: true
 
-- job: DisableSSLVerification
-  pool:
-    name: Default
-  steps:
   - task: PowerShell@2
     inputs:
       targetType: 'inline'
       script: 'git config --global http.sslVerify false'
+    displayName: 'Disable SSL Verification'
